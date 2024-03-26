@@ -13,15 +13,34 @@
   --color-text-light: #767676;
 
   /* ----- Fonts & Typography ----- */
+  --font-primary: "Sarabun", sans-serif;
+  /* --font-primary: "Noto Sans JP", sans-serif; */
+  --font-logo: "Philosopher", sans-serif;
+  /* --font-logo2: "El Messiri", sans-serif; */
 
   /* ----- Length values ----- */
-  
+  --max-width: min(100%, 1120px);
+  --padding-inline: 16px;
+
   /* ----- Other values ----- */
+  --transition: 400ms ease;
 }
 
 /* =============== BASE =============== */
+body {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+}
 
 /* =============== REUSABLE CLASSES =============== */
+.wrapper {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.logo {
+  font-family: var(--font-logo);
+}
 
 /* =============== HEADER & NAV =============== */
 
