@@ -11,16 +11,20 @@
   --color-text-strong: #414141;
   --color-text-medium: #5b5b5b;
   --color-text-light: #767676;
+  --color-gray-light: #ececec;
 
   /* ----- Fonts & Typography ----- */
   --font-primary: "Sarabun", sans-serif;
   /* --font-primary: "Noto Sans JP", sans-serif; */
   --font-logo: "Philosopher", sans-serif;
   /* --font-logo2: "El Messiri", sans-serif; */
+  --font-weight-medium: 600;
+  --letter-spacing-wide: 1px;
 
   /* ----- Length values ----- */
   --max-width: min(100%, 1120px);
   --padding-inline: 16px;
+  --nav-heigth: 64px;
 
   /* ----- Other values ----- */
   --transition: 400ms ease;
@@ -38,11 +42,76 @@ body {
   margin-inline: auto;
 }
 
+.container {
+  padding-inline: var(--padding-inline);
+  margin-inline: auto;
+}
+
 .logo {
   font-family: var(--font-logo);
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  gap: 6px;
+}
+
+.hover-blue {
+  transition: color var(--transition);
+}
+
+.hover-blue:hover {
+  color: var(--color-secondary-action);
 }
 
 /* =============== HEADER & NAV =============== */
+.header {
+  display: grid;
+}
+
+.header img {
+  width: 1.5rem;
+}
+
+.nav-top {
+  border-block-end: thin solid var(--color-gray-light);
+}
+
+.nav-top > .container {
+  height: var(--nav-heigth);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-top-btns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-bottom {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: 4px;
+}
+
+.nav-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 2;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.banner {
+  background-color: var(--color-primary);
+  background-image: url(/assets/img/banner-mobile.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
 
 /* =============== MAIN =============== */
 
