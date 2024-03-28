@@ -30,7 +30,7 @@
   --nav-heigth: 64px;
 
   /* ----- Other values ----- */
-  --transition: 400ms ease;
+  --transition: 500ms ease-in;
 }
 
 /* =============== BASE =============== */
@@ -116,16 +116,18 @@ body {
 .nav-bottom-menu {
   transform: translateY(-200%);
   width: 100%;
+  max-height: calc(100vh - var(--nav-heigth));
+  top: var(--nav-heigth);
+  padding-inline: var(--padding-inline);
   position: absolute;
   background-color: var(--color-gray-lighter);
   z-index: 10;
-  top: var(--nav-heigth);
-  padding-inline: var(--padding-inline);
   display: flex;
   flex-direction: column;
   color: var(--color-text-strong);
   font-weight: var(--font-weight-thin);
   transition: transform var(--transition);
+  overflow-y: auto;
 }
 
 .nav-bottom-menu.open {
@@ -165,7 +167,7 @@ body {
 
 /* =============== MAIN =============== */
 .main {
-  height: 500px;
+  height: 1000px;
 }
 
 /* =============== FOOTER =============== */
