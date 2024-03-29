@@ -27,7 +27,9 @@
   /* ----- Length values ----- */
   --max-width: min(100%, 1120px);
   --padding-inline: 16px;
+  --padding-inline-pc: 32px;
   --nav-heigth: 64px;
+  --nav-bottom-heigth: 120px;
 
   /* ----- Other values ----- */
   --transition: 500ms ease-in;
@@ -171,3 +173,36 @@ body {
 }
 
 /* =============== FOOTER =============== */
+
+/* =============== BREAKPOINTS =============== */
+@media screen and (min-width: 700px) {
+  .wrapper {
+    padding-inline: var(--padding-inline-pc);
+  }
+
+  .header nav {
+    position: relative;
+  }
+
+  .nav-top {
+  }
+
+  .nav-bottom {
+    height: var(--nav-bottom-heigth);
+  }
+
+  .menu {
+    /* display: none; */
+  }
+
+  .nav-bottom {
+  }
+
+  .location {
+  }
+
+  .banner {
+    /* margin-block-start: calc(var(--nav-heigth) + var(--nav-bottom-heigth)); */
+    margin-block-start: 0;
+  }
+}
