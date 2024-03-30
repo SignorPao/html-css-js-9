@@ -1,5 +1,3 @@
-"use strict";
-
 // show / close mobile menu
 let menuBtn = document.querySelector(".menu"),
   menuList = document.querySelector(".nav-bottom-menu"),
