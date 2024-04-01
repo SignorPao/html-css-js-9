@@ -6,22 +6,24 @@
   --color-primary: #003781;
   --color-secondary: #006192;
   --color-secondary-action: #008ed6;
+  --color-blue-light: #f1f9fa;
   /* --color-secondary-action: #007ab3; */
   --color-white: #ffffff;
   --color-text-strong: #414141;
   --color-text-medium: #5b5b5b;
   --color-text-light: #767676;
+  --color-text-hover: #c2c2c2;
   --color-gray-light: #ececec;
   --color-gray-lighter: #f5f5f5;
 
   /* ----- Fonts & Typography ----- */
   --font-primary: "Sarabun", sans-serif;
-  /* --font-primary: "Noto Sans JP", sans-serif; */
   --font-logo: "Philosopher", sans-serif;
-  /* --font-logo2: "El Messiri", sans-serif; */
 
+  --font-size-main: 18px;
   --font-weight-thin: 300;
   --font-weight-medium: 600;
+  --font-weight-bold: 700;
   --letter-spacing-wide: 1px;
 
   /* ----- Length values ----- */
@@ -29,7 +31,7 @@
   --padding-inline: 16px;
   --padding-inline-pc: 32px;
   --nav-heigth: 64px;
-  /* --nav-bottom-heigth: 120px; */
+  --vertical-gap: 48px;
 
   /* ----- Other values ----- */
   --transition: 500ms cubic-bezier(0.33, 1, 0.68, 1);
@@ -39,6 +41,22 @@
 body {
   font-family: var(--font-primary);
   color: var(--color-primary);
+}
+
+h1,
+h2 {
+  hyphens: none;
+  font-weight: var(--font-weight-bold);
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 40px;
 }
 
 /* =============== REUSABLE CLASSES =============== */
@@ -179,13 +197,57 @@ body {
 
 /* =============== MAIN =============== */
 .main {
-  height: 1000px;
+  font-size: var(--font-size-main);
+}
+
+.two-articles {
+}
+
+.article-one,
+.article-two .wrapper {
+  padding-block: var(--vertical-gap);
+  display: flex;
+  flex-flow: column wrap;
+  gap: 2rem;
+}
+
+.article-one {
+  color: var(--color-primary);
+}
+
+.article-two {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.two-articles a {
+  text-transform: uppercase;
+  font-size: initial;
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  gap: 0.6rem;
+  width: fit-content;
+}
+
+.article-two a:hover {
+  color: var(--color-text-hover);
 }
 
 /* =============== FOOTER =============== */
 
 /* =============== BREAKPOINTS =============== */
 @media screen and (min-width: 700px) {
+  h1 {
+    font-size: 54px;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
   .wrapper {
     padding-inline: var(--padding-inline-pc);
   }

@@ -13,8 +13,6 @@
 
 html {
   font-size: 100%;
-  /* in this case 1rem = 10px */
-  /* font-size: 62.5%; */
   scroll-behavior: smooth;
   height: 100%;
 }
@@ -71,4 +69,5 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  line-height: 28px;
 }
