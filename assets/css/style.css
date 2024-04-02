@@ -2,7 +2,6 @@
 
 /* =============== VARIABLES =============== */
 :root {
-  /* ----- Colors ----- */
   --color-primary: #003781;
   --color-secondary: #006192;
   --color-secondary-action: #008ed6;
@@ -15,6 +14,12 @@
   --color-text-hover: #c2c2c2;
   --color-gray-light: #ececec;
   --color-gray-lighter: #f5f5f5;
+
+  /* ----- Shadow ----- */
+  --shadow-color: #6767671a;
+  --shadow-low: 0px 1px 1.1px var(--shadow-color),
+    0px 1.6px 1.8px -1.2px var(--shadow-color),
+    0px 3.9px 4.4px -2.5px var(--shadow-color);
 
   /* ----- Fonts & Typography ----- */
   --font-primary: "Sarabun", sans-serif;
@@ -44,19 +49,10 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   hyphens: none;
   font-weight: var(--font-weight-bold);
-}
-
-h1 {
-  font-size: 40px;
-  line-height: 48px;
-}
-
-h2 {
-  font-size: 35px;
-  line-height: 40px;
 }
 
 /* =============== REUSABLE CLASSES =============== */
@@ -75,12 +71,37 @@ h2 {
   cursor: pointer;
 }
 
+.h1 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.h2 {
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
 .hover-blue {
   transition: color var(--transition);
 }
 
 .hover-blue:hover {
   color: var(--color-secondary-action);
+}
+
+.read-link {
+  text-transform: uppercase;
+  font-size: initial;
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  gap: 0.6rem;
+  width: fit-content;
 }
 
 /* =============== HEADER & NAV =============== */
@@ -126,6 +147,10 @@ h2 {
   display: flex;
   justify-content: flex-end;
   padding-block: 4px;
+}
+
+.nav-bottom.mobile-scroll {
+  box-shadow: var(--shadow-low);
 }
 
 .location {
@@ -200,9 +225,7 @@ h2 {
   font-size: var(--font-size-main);
 }
 
-.two-articles {
-}
-
+/* two articles */
 .article-one,
 .article-two .wrapper {
   padding-block: var(--vertical-gap);
@@ -220,30 +243,43 @@ h2 {
   color: var(--color-white);
 }
 
-.two-articles a {
-  text-transform: uppercase;
-  font-size: initial;
-  letter-spacing: var(--letter-spacing-wide);
-  font-weight: var(--font-weight-medium);
-  display: flex;
-  gap: 0.6rem;
-  width: fit-content;
+.article-two .read-link:hover {
+  color: var(--color-text-hover);
 }
 
-.article-two a:hover {
-  color: var(--color-text-hover);
+/* spotligth */
+.spotlight {
+  background-color: var(--color-blue-light);
+}
+
+.spotlight .wrapper {
+  padding-block: var(--vertical-gap);
+}
+
+.spotlight-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spotlight-card {
+  padding-block: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
 }
 
 /* =============== FOOTER =============== */
 
 /* =============== BREAKPOINTS =============== */
 @media screen and (min-width: 700px) {
-  h1 {
+  .h1 {
     font-size: 54px;
     line-height: 60px;
   }
 
-  h2 {
+  .h2 {
     font-size: 40px;
     line-height: 48px;
   }
@@ -348,6 +384,11 @@ h2 {
 
   .banner {
     margin-block-start: 0;
+  }
+
+  .spotlight-cards {
+    flex-direction: row;
+    gap: 2rem;
   }
 }
 

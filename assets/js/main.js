@@ -11,3 +11,11 @@ menuBtn.addEventListener("click", () => {
     isOpen ? "/assets/img/close.svg" : "/assets/img/menu.svg"
   );
 });
+
+// add navigation shadow when scroll down (only mobile)
+let navBar = document.querySelector(".nav-bottom");
+window.onscroll = function () {
+  window.scrollY > 50
+    ? navBar.classList.add("mobile-scroll")
+    : navBar.classList.remove("mobile-scroll");
+};
