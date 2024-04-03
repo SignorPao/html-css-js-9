@@ -5,8 +5,9 @@
   --color-primary: #003781;
   --color-secondary: #006192;
   --color-secondary-action: #008ed6;
+  --color-tertiary: #cfe9ee;
   --color-blue-light: #f1f9fa;
-  /* --color-secondary-action: #007ab3; */
+  --color-secondary-action: #007ab3;
   --color-white: #ffffff;
   --color-text-strong: #414141;
   --color-text-medium: #5b5b5b;
@@ -84,6 +85,7 @@ h3 {
 .h3 {
   font-size: 24px;
   line-height: 32px;
+  letter-spacing: 0.2px;
 }
 
 .hover-blue {
@@ -99,9 +101,13 @@ h3 {
   font-size: initial;
   letter-spacing: var(--letter-spacing-wide);
   font-weight: var(--font-weight-medium);
-  display: flex;
-  gap: 0.6rem;
+  display: inline-block;
   width: fit-content;
+  vertical-align: middle;
+}
+
+.read-link svg {
+  vertical-align: -7px;
 }
 
 /* =============== HEADER & NAV =============== */
@@ -270,6 +276,53 @@ h3 {
   flex: 1;
 }
 
+.spotlight-grid {
+  padding-block: 40px;
+}
+
+.spotlight-grid-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.spotlight-grid-row article {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.spotlight-grid-row h3 {
+  font-weight: var(--font-weight-thin);
+}
+
+.spotlight-grid-row p {
+  font-size: initial;
+}
+
+.spotlight-grid-row img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.spotlight-grid-row:first-child article:first-of-type,
+.spotlight-grid-row:last-child article:last-of-type {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.spotlight-grid-row:first-child article:nth-of-type(2) {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+}
+
+.spotlight-grid-row:last-child article:first-of-type {
+  background-color: var(--color-secondary-action);
+  color: var(--color-white);
+}
+
 /* =============== FOOTER =============== */
 
 /* =============== BREAKPOINTS =============== */
@@ -282,6 +335,11 @@ h3 {
   .h2 {
     font-size: 40px;
     line-height: 48px;
+  }
+
+  .h3 {
+    font-size: 30px;
+    line-height: 38px;
   }
 
   .wrapper {
@@ -389,6 +447,23 @@ h3 {
   .spotlight-cards {
     flex-direction: row;
     gap: 2rem;
+  }
+
+  .spotlight-grid-row {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .spotlight-grid-row:first-child > * {
+    width: 100%;
+  }
+
+  .spotlight-grid-row:last-child > * {
+    width: 25%;
+  }
+
+  .spotlight-grid-row article {
+    padding: 1.5rem 2rem;
   }
 }
 
