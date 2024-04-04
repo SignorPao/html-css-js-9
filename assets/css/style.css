@@ -44,7 +44,7 @@
 
   /* ----- Other values ----- */
   --transition: 500ms cubic-bezier(0.33, 1, 0.68, 1);
-  --border-radius-small: 0.2rem;
+  --border-radius-small: 0.3rem;
   --border-radius-medium: 0.5rem;
   --border-radius-big: 1rem;
 }
@@ -114,6 +114,15 @@ h3 {
 
 .read-link svg {
   vertical-align: -7px;
+}
+
+.btn {
+  border-radius: var(--border-radius-small);
+  text-transform: uppercase;
+  font-size: initial;
+  font-weight: var(--font-weight-medium);
+  padding: 0.8rem 2rem;
+  transition: background-color var(--transition);
 }
 
 /* =============== HEADER & NAV =============== */
@@ -461,6 +470,53 @@ h3 {
   gap: 2rem;
 }
 
+/* news */
+.news {
+  background-color: var(--color-blue-light);
+}
+
+.news .wrapper {
+  padding-block: var(--vertical-gap);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.news-container article {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.news-container article h3 {
+  font-weight: var(--font-weight-thin);
+}
+
+.news-container article p {
+  font-size: inherit;
+  font-weight: var(--font-weight-thin);
+}
+
+.news-container article a {
+  align-self: center;
+}
+
+.news button {
+  background-color: var(--color-secondary-action-2);
+  color: var(--color-white);
+}
+
+.news button:hover {
+  background-color: var(--color-secondary);
+}
+
 /* =============== FOOTER =============== */
 
 /* =============== BREAKPOINTS =============== */
@@ -637,6 +693,25 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .news-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .news-container article {
+    width: 33%;
+    padding: 0;
+  }
+
+  .news-container article a {
+    align-self: auto;
+  }
+
+  .news button {
+    width: fit-content;
+    margin-inline: auto;
   }
 }
 
