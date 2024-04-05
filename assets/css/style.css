@@ -532,7 +532,7 @@ h3 {
   flex: 1;
 }
 
-.investor-img{
+.investor-img {
   flex: 1;
 }
 
@@ -546,8 +546,31 @@ h3 {
   color: var(--color-text-strong);
 }
 
-.graph img{
+.graph img {
   width: 250px;
+}
+
+/* calendar */
+.calendar {
+  background-color: var(--color-blue-light);
+}
+
+.calendar .wrapper {
+  padding-block: var(--vertical-gap);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.calendar-img {
+  flex: 1;
+}
+
+.calendar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
 }
 
 /* =============== FOOTER =============== */
@@ -748,8 +771,11 @@ h3 {
   }
 
   .investor {
-    /* padding-block: var(--vertical-gap); */
-    /* display: flex; */
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .calendar .wrapper {
     flex-direction: row;
     gap: 2rem;
   }
