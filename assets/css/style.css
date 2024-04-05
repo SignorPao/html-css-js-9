@@ -517,6 +517,38 @@ h3 {
   background-color: var(--color-secondary);
 }
 
+/* investor */
+.investor {
+  padding-block: var(--vertical-gap);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.investor-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+}
+
+.investor-img{
+  flex: 1;
+}
+
+.graph {
+  font-size: 14px;
+  flex: 1;
+}
+
+.graph p {
+  line-height: 18px;
+}
+
+.graph img{
+  width: 250px;
+}
+
 /* =============== FOOTER =============== */
 
 /* =============== BREAKPOINTS =============== */
@@ -712,6 +744,13 @@ h3 {
   .news button {
     width: fit-content;
     margin-inline: auto;
+  }
+
+  .investor {
+    /* padding-block: var(--vertical-gap); */
+    /* display: flex; */
+    flex-direction: row;
+    gap: 2rem;
   }
 }
 
