@@ -355,10 +355,10 @@ h3 {
 .podcast-card {
   border: thin solid var(--color-text-strong);
   border-radius: var(--border-radius-big);
-  padding: 1rem 0.5rem;
+  padding: 0.6rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   text-align: center;
 }
 
