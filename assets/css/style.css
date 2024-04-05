@@ -543,6 +543,7 @@ h3 {
 
 .graph p {
   line-height: 18px;
+  color: var(--color-text-strong);
 }
 
 .graph img{
