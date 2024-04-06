@@ -573,6 +573,86 @@ h3 {
   flex: 1;
 }
 
+/* stay up */
+.stay-up {
+  padding-block: var(--vertical-gap);
+}
+
+.stay-up-container {
+  margin-block-start: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2px;
+  justify-content: center;
+}
+
+.stay-up-container article {
+  width: calc(50% - 2px);
+  height: fit-content;
+  background-color: var(--color-blue-light);
+  border: thin solid var(--color-text-light);
+  font-size: 0.8em;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.stay-up-container article p + p {
+  margin-block-start: 1rem;
+}
+
+.stay-up-container article::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.stay-up-container article::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  height: 7rem;
+  background: linear-gradient(to bottom, transparent, #f1f9fa 90%);
+}
+
+.stay-up-container article .content {
+  padding: 1rem;
+  position: absolute;
+  inset: 0;
+}
+
+.stay-up-container article span {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  z-index: 1;
+  font-weight: var(--font-weight-thin);
+  color: var(--color-text-medium);
+  display: flex;
+  gap: 6px;
+}
+
+.stay-up-container article:nth-of-type(3) {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.stay-up-container article:nth-last-of-type(3):after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  height: 5rem;
+  background: linear-gradient(to bottom, transparent, #003781 90%);
+}
+
+.stay-up-container article:nth-of-type(3) span {
+  color: var(--color-white);
+}
+
 /* =============== FOOTER =============== */
 
 /* =============== BREAKPOINTS =============== */
@@ -779,6 +859,10 @@ h3 {
     flex-direction: row;
     gap: 2rem;
   }
+
+  .stay-up-container article {
+    width: calc((100% / 3) - 2px);
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -799,5 +883,9 @@ h3 {
   .podcast-card-top {
     flex-direction: row;
     gap: 0.6rem;
+  }
+
+  .stay-up-container article {
+    width: calc((100% / 4) - 2px);
   }
 }
