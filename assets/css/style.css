@@ -688,6 +688,30 @@ h3 {
   padding: 0.8rem;
 }
 
+/* find */
+.find {
+  padding-block: var(--vertical-gap);
+  background-color: var(--color-primary);
+}
+
+.find .wrapper {
+  color: var(--color-white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.find button {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+}
+
+.find button:hover {
+  background-color: var(--color-text-hover);
+}
+
 /* =============== FOOTER =============== */
 
 /* =============== BREAKPOINTS =============== */
@@ -905,6 +929,10 @@ h3 {
 
   .links-container article {
     width: calc((100% / 2) - 1rem);
+  }
+
+  .find button {
+    width: fit-content;
   }
 }
 
