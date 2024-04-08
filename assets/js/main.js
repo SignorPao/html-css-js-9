@@ -19,3 +19,11 @@ window.onscroll = function () {
     ? navBar.classList.add("mobile-scroll")
     : navBar.classList.remove("mobile-scroll");
 };
+
+// open / close footer links
+// let linksTitle = document.querySelectorAll(".footer-links-title"),
+//   linksList = document.querySelectorAll(".footer-links-title ~ ul");
+
+// linksTitle.addEventListener('click', function listHandler(){
+//   linksList.classList.toggle('show')
+// })

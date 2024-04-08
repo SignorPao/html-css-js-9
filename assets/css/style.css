@@ -668,7 +668,7 @@ h3 {
 .links-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .links-container article {
@@ -706,6 +706,7 @@ h3 {
 .find button {
   background-color: var(--color-white);
   color: var(--color-secondary);
+  width: 100%;
 }
 
 .find button:hover {
@@ -713,6 +714,50 @@ h3 {
 }
 
 /* =============== FOOTER =============== */
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-links {
+  background-color: var(--color-gray-lighter);
+}
+
+.footer-links-title {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-medium);
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-block-end: thin solid var(--color-text-hover);
+}
+
+.footer-links-title img {
+  width: 32px;
+}
+
+.footer-links ul {
+  padding-inline: var(--padding-inline);
+  color: var(--color-text-medium);
+  font-size: 16px;
+  padding-block: 1rem;
+  background-color: var(--color-white);
+  display: none;
+}
+
+.footer-links ul.show {
+  display: block;
+}
+
+.footer-links ul li {
+  margin-block-end: 1rem;
+}
 
 /* =============== BREAKPOINTS =============== */
 @media screen and (min-width: 620px) {
@@ -925,6 +970,7 @@ h3 {
 
   .links-container {
     flex-flow: row wrap;
+    gap: 4rem 2rem;
   }
 
   .links-container article {
