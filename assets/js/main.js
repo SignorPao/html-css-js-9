@@ -20,10 +20,17 @@ window.onscroll = function () {
     : navBar.classList.remove("mobile-scroll");
 };
 
-// open / close footer links
-// let linksTitle = document.querySelectorAll(".footer-links-title"),
-//   linksList = document.querySelectorAll(".footer-links-title ~ ul");
+// open / close footer links (accordion)
+let accordion = document.querySelectorAll(".footer-links article");
+for (let i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function () {
+    this.classList.toggle("show");
+  });
+}
 
-// linksTitle.addEventListener('click', function listHandler(){
-//   linksList.classList.toggle('show')
-// })
+// this time
+let timeContainer = document.querySelector(".copy p time"),
+  thisYear = new Date().getFullYear();
+if (thisYear > 2024) {
+  timeContainer.innerHTML = `2024 - ${thisYear}`;
+}
