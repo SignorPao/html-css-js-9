@@ -63,6 +63,16 @@ h3 {
   font-weight: var(--font-weight-bold);
 }
 
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
 /* =============== REUSABLE CLASSES =============== */
 .wrapper {
   max-width: var(--max-width);
@@ -1085,7 +1095,7 @@ h3 {
     color: var(--color-text-light);
   }
 
-  .footer-socials ul{
+  .footer-socials ul {
     gap: 4rem;
   }
 
